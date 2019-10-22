@@ -30,7 +30,7 @@
   	```
 3. Insert the following lines inside the dependencies block in `android/app/build.gradle`:
   	```
-      compile project(':react-native-zoho-asap')
+      implementation project(':react-native-zoho-asap')
   	```
 
 
@@ -58,9 +58,21 @@ Add this to the `proguard-rules.pro` file
 -dontwarn retrofit2.**
 ```
 
+### Add maven repository
+
+Add in the root `build.gradle` file of the project the repository
+
+```
+maven { url 'http://maven.zohodl.com/' }
+```
+
+
 ```javascript
 import ZohoAsap from 'react-native-zoho-asap';
 
-// TODO: What to do with the module?
-ZohoAsap;
+// Initialize the module
+ZohoAsap.init(orgId, appId, dataCenterValue);
+
+// In the screen that shows the dashboard
+ZohoAsap.startDeskHomeScreen();
 ```

@@ -1,5 +1,6 @@
 package fr.wecasa;
 
+import android.app.Activity;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
@@ -10,7 +11,7 @@ import com.zoho.deskportalsdk.ZohoDeskPortalSDK;
 public class ZohoAsapModule extends ReactContextBaseJavaModule {
 
     private final ReactApplicationContext reactContext;
-    private final ZohoDeskPortalSDK deskInstance;
+    private ZohoDeskPortalSDK deskInstance;
 
     public ZohoAsapModule(ReactApplicationContext reactContext) {
         super(reactContext);
@@ -34,7 +35,7 @@ public class ZohoAsapModule extends ReactContextBaseJavaModule {
     public void startDeskHomeScreen() {
         Activity currentActivity = getCurrentActivity();
         if (currentActivity != null) {
-            deskInstance.startDeskHomeScreen(activity.this);
+            deskInstance.startDeskHomeScreen(currentActivity.this);
         }
     }
 
