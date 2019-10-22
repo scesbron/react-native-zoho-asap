@@ -1,0 +1,33 @@
+{
+  "name": "react-native-zoho-asap",
+  "title": "React Native Zoho Asap",
+  "version": "1.0.0",
+  "description": "Integrates zoho asap sdk into react-native",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scesbron/react-native-zoho-asap.git",
+    "baseUrl": "https://github.com/scesbron/react-native-zoho-asap"
+  },
+  "keywords": [
+    "react-native"
+  ],
+  "author": {
+    "name": "Sébastien Cesbron",
+    "email": "sebastien@wecasa.fr"
+  },
+  "license": "MIT",
+  "licenseFilename": "LICENSE",
+  "readmeFilename": "README.md",
+  "peerDependencies": {
+    "react": "^16.8.1",
+    "react-native": ">=0.59.0-rc.0 <1.0.x"
+  },
+  "devDependencies": {
+    "react": "^16.9.10",
+    "react-native": "^0.59.10"
+  }
+}
