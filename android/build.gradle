@@ -12,8 +12,6 @@ buildscript {
         repositories {
             google()
             jcenter()
-            maven { url 'https://maven.google.com' }
-            maven { url 'http://maven.zohodl.com/' }
         }
         dependencies {
             classpath 'com.android.tools.build:gradle:3.4.1'
@@ -58,13 +56,12 @@ repositories {
     }
     google()
     jcenter()
+    maven { url 'https://maven.google.com' }
+    maven { url 'http://maven.zohodl.com/' }
 }
 
 dependencies {
-    // ref:
-    // https://github.com/facebook/react-native/blob/0.61-stable/template/android/app/build.gradle#L192
-    //noinspection GradleDynamicVersion
-    implementation 'com.facebook.react:react-native:+'  // From node_modules
+    implementation 'com.facebook.react:react-native:0.59.10'  // From node_modules
     implementation 'com.zoho.desk:asapsdk:1.1.4'
 }
 
