@@ -24,9 +24,9 @@ public class ZohoAsapModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    public void init(String orgId, String appId, String dataCenterValue) {
+    public void init(String orgId, String appId, String dataCenterValue, String language) {
         ZohoDeskPortalSDK.Logger.enableLogs();
-        DeskConfig config = new DeskConfig.Builder().build();
+        DeskConfig config = new DeskConfig.Builder().setLanguage(language).build();
         deskInstance = ZohoDeskPortalSDK.getInstance(getCurrentActivity().getApplication());
         deskInstance.initDesk(Long.valueOf(orgId), appId, ZohoDeskPortalSDK.DataCenter.valueOf(dataCenterValue), config);
     }
