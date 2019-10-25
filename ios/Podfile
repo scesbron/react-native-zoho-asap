@@ -1,0 +1,3 @@
+target 'My Sample App' do
+  pod 'ZohoDeskPortalSDK', :git => 'https://github.com/zoho/ZohoDeskPortalSDK.git'
+end
